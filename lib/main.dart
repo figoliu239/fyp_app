@@ -40,25 +40,25 @@ class _BottomNavigationControllerState extends State<BottomNavigationController>
         body: pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          items: const <BottomNavigationBarItem>[
+          items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Image.asset('assets/homeicon.jpg'),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: Image.asset('assets/searchicon.jpg'),
               label: 'Search',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart),// just temporary use
+              icon: Image.asset('assets/barcodeicon.jpg'),// just temporary use
               label:'Barcode',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.attach_money),
+              icon: Image.asset('assets/moneyicon.jpg'),
               label:'Coin',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: Image.asset('assets/settingicon.jpg'),
               label:'Settings',
             ),
           ],
