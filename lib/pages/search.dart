@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_app/pages/detailresult.dart';
 
 class Search extends StatelessWidget {
   @override
@@ -7,9 +8,25 @@ class Search extends StatelessWidget {
       appBar: AppBar(
           title: Text('Search')
       ),
-      body: Center(
-        child: Text('search'),
-      ),
+      backgroundColor: Colors.white,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          Text('try to have a search bar here'),
+          FlatButton(onPressed: null, child: null),
+          RaisedButton.icon(
+            onPressed: () =>Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (context) => DetailedResult()
+              )),
+            icon:Icon(Icons.search),
+            label: Text("Search"),
+
+          ),
+
+        ],
+      )
 
     );
   }
