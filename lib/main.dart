@@ -38,27 +38,54 @@ class _BottomNavigationControllerState extends State<BottomNavigationController>
           //title: const Text('Home(unfinished)'),
         //),
         body: pages[_currentIndex],
+        floatingActionButton: Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: SizedBox(
+            height: 70,
+            width: 70,
+            child: FloatingActionButton(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              onPressed: () {setState(() {
+                _currentIndex = 2;
+              });},
+              child: Container(
+                height: 175,
+                width: 175,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 4),
+                  shape: BoxShape.circle,
+                  color: Colors.red
+                ),
+                child: Image.asset('assets/barcodeicon.jpg',height: 50,width: 50,),
+              ),
+            ),
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Image.asset('assets/homeicon.jpg'),
+              icon: Image.asset('assets/homeicon.jpg',height: 50,width: 50,),
               label: 'Home',
+
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('assets/searchicon.jpg'),
+              icon: Image.asset('assets/searchicon.jpg',height: 50,width: 50,),
               label: 'Search',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('assets/barcodeicon.jpg'),// just temporary use
+              icon: Image.asset('assets/barcodeicon.jpg',height: 50,width: 50,color: Colors.transparent,),
               label:'Barcode',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('assets/moneyicon.jpg'),
+              icon: Image.asset('assets/moneyicon.jpg',height: 50,width: 50,),
               label:'Coin',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('assets/settingicon.jpg'),
+              icon: Image.asset('assets/settingicon.jpg',height: 50,width: 50,),
               label:'Settings',
             ),
           ],
