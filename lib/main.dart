@@ -4,12 +4,12 @@ import 'package:fyp_app/pages/search.dart';
 import 'package:fyp_app/pages/setting.dart';
 import 'package:fyp_app/pages/barcode.dart';
 import 'package:fyp_app/pages/coin.dart';
-
+import 'package:fyp_app/size_config.dart';
 void main() {
-  runApp(Myapp());
+  runApp(App());
 }
 
-class Myapp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,6 +33,7 @@ class _BottomNavigationControllerState extends State<BottomNavigationController>
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);// this is important for using proportionatescreen function
     return Scaffold(
         //appBar: AppBar(
           //title: const Text('Home(unfinished)'),
@@ -41,8 +42,8 @@ class _BottomNavigationControllerState extends State<BottomNavigationController>
         floatingActionButton: Padding(
           padding: EdgeInsets.only(top: 20),
           child: SizedBox(
-            height: 70,
-            width: 70,
+            height: getProportionateScreenHeight(70),
+            width: getProportionateScreenWidth(70),
             child: FloatingActionButton(
               backgroundColor: Colors.transparent,
               elevation: 0,

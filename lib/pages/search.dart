@@ -13,7 +13,6 @@ class Search extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Text('try to have a search bar here'),
-          FlatButton(onPressed: null, child: null),
           RaisedButton.icon(
             onPressed: () =>Navigator.push(
                   context,

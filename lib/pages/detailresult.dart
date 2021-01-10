@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_app/foodproduct.dart';
+import 'package:fyp_app/size_config.dart';
 import 'package:fyp_app/pages/detailNutrition.dart';
 import 'package:fyp_app/pages/detailAlternative.dart';
 import 'package:fyp_app/pages/detailScore.dart';
@@ -45,7 +46,7 @@ class DetailedResult extends StatelessWidget {
                     )),
                 child: Row(
                   children: <Widget>[
-                    Image.asset('assets/bread.jpg',height: 150,width: 150,),
+                    Image.asset('assets/bread.jpg',height: getProportionateScreenHeight(150),width: getProportionateScreenWidth(150),),
                     Flexible(
                       child: Card(
                         child: Column(
@@ -67,8 +68,8 @@ class DetailedResult extends StatelessWidget {
             ),
           ),
           Container(
-            height: 170,
-            width: 380,
+            height: getProportionateScreenHeight(170),
+            width: getProportionateScreenWidth(380),
             child: InkWell(
               onTap: () =>Navigator.push(
                   context,
@@ -104,8 +105,8 @@ class DetailedResult extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  height:180,
-                  width: 180,
+                  height: getProportionateScreenHeight(180),
+                  width: getProportionateScreenWidth(180),
                   child: InkWell(
                     onTap: () =>Navigator.push(
                         context,
@@ -120,13 +121,13 @@ class DetailedResult extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: getProportionateScreenWidth(10),
                 ),
                 Column(
                   children: [
                     Container(
-                      height:90,
-                      width:180,
+                      height:getProportionateScreenHeight(90),
+                      width:getProportionateScreenWidth(180),
                       child: InkWell(
                         onTap: () =>Navigator.push(
                             context,
@@ -140,8 +141,8 @@ class DetailedResult extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height:90,
-                      width:180,
+                      height:getProportionateScreenHeight(90),
+                      width:getProportionateScreenWidth(180),
                       child: InkWell(
                         onTap: () =>Navigator.push(
                             context,
